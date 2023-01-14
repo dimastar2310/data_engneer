@@ -25,7 +25,7 @@ df = df[df['Species'] == "setosa"]
 #b = pickle.dump(df, open('data.pkl', 'wb'))
 #b = df.to_pickle()
 # Establish connection with the blob storage account
-blob = BlobClient.from_connection_string(conn_str=conn_str, container_name=containerName, blob_name=outputBlobName)
+blob = BlobClient.from_connection_string(conn_str=conn_str, container_name=containerName, blob_name="dummy.pkl")
 
 # Save the subset of the iris dataframe locally in task node
 #df.to_csv(outputBlobName, index = False)
